@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First task</title>
+	<meta charset="utf-8">
+	<!--<link rel="stylesheet" type="text/css" href="style.css">--> 
+  	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+		
+</head>
+<body>
+
+  <div>
+	  <h2>Задача # 1</h2>
+	  <p>Даны два числа. Выведите большее из них.</p>
+	  <h4>Поле для ввода первого числа</h4>
+	  <input type="number" id="first-number">
+	  <h4>Поле для ввода второго числа</h4>
+	  <input type="number" id="second-number">
+	  <button id="larger-number">Выведи большее число</button>
+	  <p>Большее число: <span id="answer"></span></p>
+  </div>
+
+  
+  <script type="text/javascript">
+    $('#larger-number').on('click', function() {    //on - событие (скролить, кликать) 'click' - тип события (что надо делать)
+		var firstNumber = $('#first-number').val();  // что такое свойтсва (параметры) и методы (меняет, динамика)  .val - примет значение (цифру)
+		var secondNumber = $('#second-number').val();
+		if(firstNumber<secondNumber)
+			$('#answer').text(secondNumber);         // text - строчное значение, append - встроить в  дом-элемент;
+		else if(firstNumber>secondNumber)
+			$('#answer').text(firstNumber);
+		else $('#answer').text('Они равны');
+	});  
+  
+  
+  </script>
+
+ </body>
+</html>
