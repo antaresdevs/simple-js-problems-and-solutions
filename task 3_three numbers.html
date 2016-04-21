@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First task</title>
+	<meta charset="utf-8">
+	<!--<link rel="stylesheet" type="text/css" href="style.css">--> 
+  	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+		
+</head>
+<body>
+
+  <div>
+	  <h2>Задача # 3</h2>
+	  <p> Даны три числа. Если первое число больше двух, то найти их сумму, иначе найти разность между вторым и третьим числами.</p>
+	  <h4>Поле для ввода первого числа</h4>
+	  <input type="number" id="first-number">
+	  <h4>Поле для ввода второго числа</h4>
+	  <input type="number" id="second-number">
+	  <h4>Поле для ввода третьего числа</h4>
+	  <input type="number" id="third-number">
+	  <p><button id="find-results">Узнать результат</button></p>
+	  <p><span id="answer">Результат:</span></p>
+  </div>
+
+  
+  <script type="text/javascript">
+    $('#find-results').on('click', function() {     //on - событие (скролить, кликать) 'click' - тип события (что надо делать)
+		var firstNumber = $('#first-number').val();  // .val - примет значение цифри. что такое свойства (параметры) и методы (меняет, динамика)  
+		var secondNumber = $('#second-number').val();
+		var thirdNumber = $('#third-number').val();
+		if(firstNumber>2) {
+			var sum = Number(firstNumber) + Number(secondNumber) + Number(thirdNumber);  // Number - обернули в число
+			$('#answer').text(sum);				     // text - строчное значение, append - встроить в  дом-элемент;
+		} else {
+			var minus = Number(secondNumber) - Number(thirdNumber);
+			$('#answer').text(minus);
+			
+		}
+		
+	});  
+  
+  
+  </script>
+
+ </body>
+</html>
